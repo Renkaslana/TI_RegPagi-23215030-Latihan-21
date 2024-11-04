@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class ProgramRataRataNilai {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Masukkan banyaknya mahasiswa: ");
+        int jumlahMahasiswa = input.nextInt();
+
+        double[] nilaiMahasiswa = new double[jumlahMahasiswa];
+
+        for (int i = 0; i < jumlahMahasiswa; i++) {
+            System.out.print("Masukkan nilai mahasiswa ke-" + (i + 1) + ": ");
+            nilaiMahasiswa[i] = input.nextDouble();
+        }
+
+        System.out.println("\nNilai Mahasiswa:");
+        for (int i = 0; i < jumlahMahasiswa; i++) {
+            System.out.printf("Nilai mahasiswa ke-%d: %.2f%n", (i + 1), nilaiMahasiswa[i]);
+        }
+    }
+}
